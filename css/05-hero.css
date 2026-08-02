@@ -61,16 +61,70 @@
    HERO ROLE - MOBILE PERFECT ALIGNMENT
 ========================================= */
 
+/* =========================================
+   HERO — MOBILE FINAL FIX
+========================================= */
+
 @media (max-width: 600px) {
+
+    /* HERO */
+    .hero {
+        min-height: 100svh;
+        height: auto;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        position: relative;
+
+        padding-top: 100px;
+        padding-bottom: 100px;
+
+        box-sizing: border-box;
+    }
+
+
+    /* HERO CONTENT */
+    .hero-inner {
+        width: 100%;
+        position: relative;
+        z-index: 5;
+    }
+
+
+    /* PORTFOLIO TAG */
+    .hero-tag {
+        font-size: 11px;
+        line-height: 1.6;
+
+        letter-spacing: .25em;
+
+        margin-bottom: 22px;
+    }
+
+
+    /* MOHANRAJ K */
+    .hero h1 {
+        font-size: clamp(48px, 13vw, 72px);
+        line-height: .95;
+
+        margin: 0;
+    }
+
+
+    /* =========================
+       ROLE TEXT
+    ========================= */
 
     .hero-roles {
         position: relative;
 
         width: 100%;
-        height: 42px;
+        height: 32px;
 
-        margin-top: 8px;
-        margin-bottom: 18px;
+        margin-top: 14px;
+        margin-bottom: 0;
 
         overflow: hidden;
     }
@@ -80,7 +134,7 @@
         position: relative;
 
         width: 100%;
-        height: 42px;
+        height: 32px;
 
         margin: 0;
         padding: 0;
@@ -96,20 +150,19 @@
         left: 0;
 
         width: 100%;
-        height: 42px;
+        height: 32px;
 
         margin: 0;
         padding: 0;
 
         display: flex;
         align-items: center;
-        justify-content: flex-start;
 
         font-family: var(--sub);
-        font-size: clamp(15px, 4.3vw, 19px);
+        font-size: clamp(14px, 4vw, 18px);
         font-weight: 500;
 
-        line-height: 1.2;
+        line-height: 1;
 
         color: var(--grey);
 
@@ -120,8 +173,6 @@
         animation: roleFade 12s infinite ease-in-out;
     }
 
-
-    /* ROLE TIMING */
 
     .hero-roles li:nth-child(1) {
         animation-delay: 0s;
@@ -140,52 +191,69 @@
     }
 
 
-    /* FADE ONLY */
-
-    @keyframes roleFade {
-
-        0% {
-            opacity: 0;
-        }
-
-        8% {
-            opacity: 1;
-        }
-
-        20% {
-            opacity: 1;
-        }
-
-        25% {
-            opacity: 0;
-        }
-
-        100% {
-            opacity: 0;
-        }
-    }
-
-
-    /* DESCRIPTION ALIGNMENT */
-
+    /* DESCRIPTION */
     .hero-desc {
-        margin-top: 0;
+        width: 100%;
+        max-width: 520px;
 
-        max-width: 100%;
+        margin-top: 24px;
 
-        font-size: 16px;
+        font-size: 15px;
         line-height: 1.55;
+
+        color: var(--grey);
     }
 
 
-    /* BUTTON AREA */
-
+    /* BUTTONS */
     .hero-cta {
-        margin-top: 28px;
-
         display: flex;
+        align-items: center;
         flex-wrap: wrap;
 
         gap: 12px;
+
+        margin-top: 30px;
+    }
+
+
+    .btn {
+        padding: 15px 24px;
+        font-size: 13px;
+    }
+
+
+    /* SCROLL */
+    .scroll-cue {
+        bottom: 28px;
+        left: 6vw;
+    }
+}
+
+
+/* =========================================
+   ROLE FADE
+========================================= */
+
+@keyframes roleFade {
+
+    0% {
+        opacity: 0;
+    }
+
+    8% {
+        opacity: 1;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    25% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
     }
 }
