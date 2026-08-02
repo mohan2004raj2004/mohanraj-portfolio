@@ -1,0 +1,8 @@
+/* ---------- STATS ---------- */
+.stats{ display:grid; grid-template-columns:repeat(4,1fr); border-top:1px solid var(--border); border-bottom:1px solid var(--border); }
+.stat{ padding:46px 20px; text-align:center; border-right:1px solid var(--border); }
+.stat:last-child{border-right:none;}
+.stat .num{ font-family:var(--display); font-size:clamp(38px,5vw,64px); color:var(--red); font-weight:600; }
+.stat .lbl{ font-family:var(--sub); font-size:12px; letter-spacing:.1em; text-transform:uppercase; color:var(--grey); margin-top:10px; }
+@media (max-width:760px){ .stats{grid-template-columns:1fr 1fr;} .stat{border-bottom:1px solid var(--border);} }
+

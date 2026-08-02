@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mohanraj K — Creative Technologist</title>
+<!-- Font Awesome Icons -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+/>
+<link rel="preconnect" href="https://api.fontshare.com">
+<link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&f[]=general-sans@400,500,600,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+<!-- ==================================================================
+     STYLESHEETS — one file per section/feature. Edit the matching
+     file to change that part of the site; nothing else is affected.
+     ================================================================== -->
+<link rel="stylesheet" href="css/01-base-reset-variables.css">
+<link rel="stylesheet" href="css/02-cursor.css">
+<link rel="stylesheet" href="css/03-loader.css">
+<link rel="stylesheet" href="css/04-layout-nav.css">
+<link rel="stylesheet" href="css/05-hero.css">
+<link rel="stylesheet" href="css/06-about.css">
+<link rel="stylesheet" href="css/07-stats.css">
+<link rel="stylesheet" href="css/08-journey.css">
+<link rel="stylesheet" href="css/09-skills.css">
+<link rel="stylesheet" href="css/10-services.css">
+<link rel="stylesheet" href="css/11-projects.css">
+<link rel="stylesheet" href="css/12-ai-workflow.css">
+<link rel="stylesheet" href="css/13-contact.css">
+<link rel="stylesheet" href="css/14-footer.css">
+<link rel="stylesheet" href="css/15-brochure-gallery.css">
+<link rel="stylesheet" href="css/16-accessibility.css">
+</head>
+<body>
+
+<div id="loader">
+  <div class="loader-mark" id="loaderMark"></div>
+  <div class="loader-pct">
+    <span>LOADING</span>
+    <div class="loader-bar"><i id="loaderBarFill"></i></div>
+    <span class="loader-num" id="loaderNum">0</span>
+  </div>
+</div>
+
+<div class="grain"></div>
+<div class="vignette"></div>
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<nav id="nav">
+  <div class="logo" data-cursor-hover>MR<span>.</span></div>
+  <ul class="nav-links">
+    <li><a href="#about" data-cursor-hover>About</a></li>
+    <li><a href="#journey" data-cursor-hover>Journey</a></li>
+    <li><a href="#skills" data-cursor-hover>Skills</a></li>
+    <li><a href="#services" data-cursor-hover>Services</a></li>
+    <li><a href="#work" data-cursor-hover>Work</a></li>
+    <li><a href="#contact" data-cursor-hover>Contact</a></li>
+  </ul>
+  <a href="https://wa.me/918526699041?text=Hi%20Mohanraj%2C%20I%20would%20like%20to%20discuss%20a%20project."
+   target="_blank"
+   rel="noopener noreferrer"
+   class="nav-cta"
+   data-cursor-hover>
+   Let's Talk
+</a>
+  <div class="burger"><i></i><i></i></div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <canvas id="hero-canvas"></canvas>
+  <div class="blueprint"></div>
+  <div class="wrap hero-inner">
+    <div class="hero-tag" data-reveal>PORTFOLIO — 2026 &nbsp;/&nbsp; <b>CHENNAI, INDIA</b></div>
+    <h1 class="split-title name-hover">
+    <span>M</span>
+    <span>O</span>
+    <span>H</span>
+    <span>A</span>
+    <span>N</span>
+    <span>R</span>
+    <span>A</span>
+    <span>J</span>
+    <span class="name-space">&nbsp;</span>
+    <span>K</span>
+</h1>
+    <div class="hero-roles">
+      <ul id="roleList">
+        <li>Creative Technologist</li>
+        <li>AI‑Driven Graphic Designer</li>
+        <li>Industrial Brand Designer</li>
+        <li>Engineering Visual Communication Specialist</li>
+      </ul>
+    </div>
+    <p class="hero-desc" data-reveal>Bridging mechanical engineering, design and artificial intelligence into premium visual systems for industrial companies and modern businesses.</p>
+    <div class="hero-cta" data-reveal>
+      <a href="#work" class="btn btn-primary" data-cursor-hover>See My Work</a>
+      <a href="#contact" class="btn btn-outline" data-cursor-hover>Contact Me</a>
+      <a href="#" class="btn btn-outline" data-cursor-hover>Download Resume</a>
+    </div>
+  </div>
+  <div class="scroll-cue"><span>SCROLL</span><div class="line"><i></i></div></div>
+</section>
+
+<!-- ABOUT -->
+<section class="pad" id="about">
+  <div class="wrap grid-2">
+    <div>
+      <div class="eyebrow" data-reveal>ABOUT</div>
+      <h2 class="about-big" data-reveal>From <em>machines</em> to <em>meaning</em> — engineering discipline shaped into design that communicates with precision.</h2>
+      <div class="about-meta" data-reveal>
+        <div class="meta-row"><span>Based in</span><b>Chennai, Tamil Nadu, India</b></div>
+        <div class="meta-row"><span>Focus</span><b>Brand, Industrial & AI‑Driven Design</b></div>
+        <div class="meta-row"><span>Experience</span><b>2+ Years Freelance</b></div>
+        <div class="meta-row"><span>Availability</span><b>Open for select projects</b></div>
+      </div>
+    </div>
+    <div data-reveal>
+      <p style="color:var(--grey);font-weight:300;font-size:15px;margin-bottom:36px;max-width:480px;">I bridge engineering, design and artificial intelligence to create premium visual experiences for industrial companies, startups and modern businesses. My workflow pairs creative instinct with AI‑assisted productivity — faster execution, sharper strategy, higher‑quality output.</p>
+      <div class="edu-card">
+        <div class="tag">Engineering</div>
+        <h3>B.E. Mechanical Engineering</h3>
+        <p>College of Engineering, Guindy — Anna University · Final Year</p>
+      </div>
+      <div class="edu-card">
+        <div class="tag">Foundation</div>
+        <h3>Diploma, Information Technology</h3>
+        <p>Sri Sowdambika Polytechnic College, Virudhunagar</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats" id="stats">
+  <div class="stat"><div class="num" data-count="10">0</div><div class="lbl">Projects Completed</div></div>
+  <div class="stat"><div class="num" data-count="2">0</div><div class="lbl">Years Experience</div></div>
+  <div class="stat"><div class="num" data-count="5">0</div><div class="lbl">Clients Served</div></div>
+  <div class="stat"><div class="num" data-count="20">0</div><div class="lbl">Designs Created</div></div>
+</section>
+
+<!-- JOURNEY -->
+<section class="pad" id="journey">
+  <div class="wrap">
+    <div class="eyebrow" data-reveal>MY JOURNEY</div>
+    <h2 style="font-size:clamp(30px,5vw,58px);" data-reveal>A path built <span style="color:var(--red);">sideways</span>, on purpose.</h2>
+    <div class="timeline">
+      <div class="t-item" data-reveal>
+        <div class="t-dot"></div>
+        <div class="t-year">Sri Sowdambika Polytechnic</div>
+        <h3>Diploma in Information Technology</h3>
+        <p>Built a technical foundation in systems and software — the logic that still underlies every design decision I make today.</p>
+      </div>
+      <div class="t-item" data-reveal>
+        <div class="t-dot"></div>
+        <div class="t-year">1 Year</div>
+        <h3>System Administrator</h3>
+        <p>Managed infrastructure and workflows, developing an eye for process, structure and reliability under real operational pressure.</p>
+      </div>
+      <div class="t-item" data-reveal>
+        <div class="t-dot"></div>
+        <div class="t-year">2 Years — Ongoing</div>
+        <h3>Freelance Graphic Designer</h3>
+        <p>Took the leap into design — brand identity, industrial brochures and presentations for companies that needed to look as capable as they are.</p>
+      </div>
+      <div class="t-item active" data-reveal>
+        <div class="t-dot"></div>
+        <div class="t-year">College of Engineering, Guindy</div>
+        <h3>B.E. Mechanical Engineering — Final Year</h3>
+        <p>Studying engineering while running a design practice — merging technical rigor with AI‑driven creative workflows.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section class="pad" id="skills">
+  <div class="wrap">
+    <div class="eyebrow" data-reveal>CAPABILITIES</div>
+    <h2 style="font-size:clamp(30px,5vw,58px);" data-reveal>Tools I think with.</h2>
+    <div class="skills-grid">
+      <div class="skill-cat" data-reveal>
+        <h3>Design &amp; Motion</h3>
+        <div class="skill-row"><div class="top"><span>Adobe Photoshop</span><span>95%</span></div><div class="skill-bar"><i data-fill="95"></i></div></div>
+        <div class="skill-row"><div class="top"><span>Adobe Illustrator</span><span>92%</span></div><div class="skill-bar"><i data-fill="92"></i></div></div>
+        <div class="skill-row"><div class="top"><span>Premiere Pro</span><span>85%</span></div><div class="skill-bar"><i data-fill="85"></i></div></div>
+        <div class="skill-row"><div class="top"><span>After Effects</span><span>60%</span></div><div class="skill-bar"><i data-fill="60"></i></div></div>
+        <div class="skill-row"><div class="top"><span>CapCut</span><span>88%</span></div><div class="skill-bar"><i data-fill="88"></i></div></div>
+      </div>
+      <div class="skill-cat" data-reveal>
+        <h3>Engineering &amp; AI Systems</h3>
+        <div class="skill-row"><div class="top"><span>Autodesk Inventor</span><span>80%</span></div><div class="skill-bar"><i data-fill="80"></i></div></div>
+        <div class="skill-row"><div class="top"><span>HTML / CSS / JavaScript</span><span>75%</span></div><div class="skill-bar"><i data-fill="75"></i></div></div>
+        <div class="skill-row"><div class="top"><span>Busy ERP &amp; MS Excel</span><span>82%</span></div><div class="skill-bar"><i data-fill="82"></i></div></div>
+        <div class="skill-row"><div class="top"><span>ChatGPT &amp; Claude AI</span><span>96%</span></div><div class="skill-bar"><i data-fill="96"></i></div></div>
+        <div class="skill-row"><div class="top"><span>Prompt Engineering &amp; Automation</span><span>90%</span></div><div class="skill-bar"><i data-fill="90"></i></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="pad" id="services">
+  <div class="wrap">
+    <div class="eyebrow" data-reveal>SERVICES</div>
+    <h2 style="font-size:clamp(30px,5vw,58px);" data-reveal>What I build for clients.</h2>
+    <!-- =========================
+     SERVICES
+========================= -->
+
+<div class="services-grid" data-reveal>
+
+    <!-- 01 BRAND IDENTITY -->
+    <a href="brand-projects.html"
+       class="service-card service-project"
+       data-cursor-hover>
+
+        <div class="service-num">01</div>
+
+        <div class="service-content">
+            <h3>Brand Identity</h3>
+
+            <p>
+                Logo systems, colour, type and voice built
+                to hold up across every touchpoint.
+            </p>
+
+            <span class="service-view">
+                VIEW PROJECT
+                <span class="service-arrow">→</span>
+            </span>
+        </div>
+
+    </a>
+
+
+    <!-- 02 INDUSTRIAL BROCHURE -->
+    <div class="service-card service-project"
+         id="svcBrochureCard"
+         data-cursor-hover
+         tabindex="0"
+         role="button">
+
+        <div class="service-num">02</div>
+
+        <div class="service-content">
+            <h3>Industrial Brochure &amp; Company Profile</h3>
+
+            <p>
+                Technical storytelling for manufacturers
+                and engineering firms.
+            </p>
+
+            <span class="service-view">
+                VIEW PROJECT
+                <span class="service-arrow">→</span>
+            </span>
+        </div>
+
+    </div>
+
+
+    <!-- 03 PRESENTATION -->
+    <a href="presentation-projects.html"
+       class="service-card service-project"
+       data-cursor-hover>
+
+        <div class="service-num">03</div>
+
+        <div class="service-content">
+            <h3>Presentation Design</h3>
+
+            <p>
+                Investor decks and company profiles that
+                read like premium products.
+            </p>
+
+            <span class="service-view">
+                VIEW PROJECT
+                <span class="service-arrow">→</span>
+            </span>
+        </div>
+
+    </a>
+
+
+    <!-- 04 SOCIAL MEDIA -->
+    <a href="social-projects.html"
+       class="service-card service-project"
+       data-cursor-hover>
+
+        <div class="service-num">04</div>
+
+        <div class="service-content">
+            <h3>Social Media Design</h3>
+
+            <p>
+                Cohesive visual systems for consistent,
+                scroll-stopping presence.
+            </p>
+
+            <span class="service-view">
+                VIEW PROJECT
+                <span class="service-arrow">→</span>
+            </span>
+        </div>
+
+    </a>
+
+
+    <!-- 05 VIDEO EDITING -->
+    <a href="video-projects.html"
+       class="service-card service-project"
+       data-cursor-hover>
+
+        <div class="service-num">05</div>
+
+        <div class="service-content">
+            <h3>Video Editing</h3>
+
+            <p>
+                Promotional and social-first edits
+                with pace and polish.
+            </p>
+
+            <span class="service-view">
+                VIEW PROJECT
+                <span class="service-arrow">→</span>
+            </span>
+        </div>
+
+    </a>
+
+
+    <!-- 06 AI WORKFLOW -->
+    <a href="ai-projects.html"
+       class="service-card service-project"
+       data-cursor-hover>
+
+        <div class="service-num">06</div>
+
+        <div class="service-content">
+            <h3>AI Workflow &amp; Creative Direction</h3>
+
+            <p>
+                Faster, smarter production pipelines
+                powered by AI tooling.
+            </p>
+
+            <span class="service-view">
+                VIEW PROJECT
+                <span class="service-arrow">→</span>
+            </span>
+        </div>
+
+    </a>
+
+</div>
+</section>
+
+<!-- PROJECTS -->
+<section class="pad" id="work">
+  <div class="wrap">
+    <div class="eyebrow" data-reveal>SELECTED WORK</div>
+    <h2 style="font-size:clamp(30px,5vw,58px);" data-reveal>Featured Projects</h2>
+    <div class="filters" data-reveal>
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="Industrial">Industrial</button>
+      <button class="filter-btn" data-filter="Branding">Branding</button>
+      <button class="filter-btn" data-filter="Logo">Logo</button>
+      <button class="filter-btn" data-filter="Presentation">Presentation</button>
+      <button class="filter-btn" data-filter="Social">Social Media</button>
+    </div>
+    <div class="proj-grid" id="projGrid" data-reveal>
+      <!-- injected by JS -->
+    </div>
+  </div>
+</section>
+
+<!-- AI WORKFLOW -->
+<!-- AI WORKFLOW -->
+<section class="pad" id="ai-workflow">
+
+  <div class="wrap" style="text-align:center;">
+
+    <div class="eyebrow"
+         style="justify-content:center;"
+         data-reveal>
+      AI-POWERED PIPELINE
+    </div>
+
+    <h2 style="font-size:clamp(30px,5vw,58px);"
+        data-reveal>
+      One idea. Five tools. Zero friction.
+    </h2>
+
+    <div class="flow" data-reveal>
+
+      <div class="flow-node">ChatGPT</div>
+      <div class="flow-arrow"><i></i></div>
+
+      <div class="flow-node">Claude</div>
+      <div class="flow-arrow"><i></i></div>
+
+      <div class="flow-node">Photoshop</div>
+      <div class="flow-arrow"><i></i></div>
+
+      <div class="flow-node">Illustrator</div>
+      <div class="flow-arrow"><i></i></div>
+
+      <div class="flow-node">Premiere Pro</div>
+      <div class="flow-arrow"><i></i></div>
+
+      <div class="flow-node final">Final Delivery</div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- CONTACT -->
+<section class="pad" id="contact">
+  <div class="wrap">
+    <div class="contact-card" data-reveal>
+      <div>
+        <div class="eyebrow">GET IN TOUCH</div>
+        <h2>Let's design<br>something <span style="color:var(--red);">precise</span>.</h2>
+        <div class="contact-list">
+          <a href="mailto:mohan14092004raj@gmail.com" data-cursor-hover><b>Email</b>mohan14092004raj@gmail.com</a>
+          <a href="tel:+918526699041" data-cursor-hover><b>Phone</b> +918526699041 </a>
+          <a href="#" data-cursor-hover><b>Location</b> Chennai, Tamil Nadu, India</a>
+        </div>
+        <div class="socials">
+
+  <!-- LinkedIn -->
+  <a
+    href="https://www.linkedin.com/in/mohan-raj-55657539b"
+    target="_blank"
+    rel="noopener noreferrer"
+    data-cursor-hover
+    aria-label="LinkedIn"
+  >
+    <i class="fa-brands fa-linkedin-in"></i>
+  </a>
+
+  <!-- Behance -->
+  <a
+    href="https://www.behance.net/mohanraj350"
+    target="_blank"
+    rel="noopener noreferrer"
+    data-cursor-hover
+    aria-label="Behance"
+  >
+    <i class="fa-brands fa-behance"></i>
+  </a>
+
+  <!-- GitHub -->
+  <a
+    href="#"
+    data-cursor-hover
+    aria-label="GitHub"
+  >
+    <i class="fa-brands fa-github"></i>
+  </a>
+
+  <!-- Instagram -->
+  <a
+    href="https://www.instagram.com/_.moha_n_offzl/"
+    target="_blank"
+    rel="noopener noreferrer"
+    data-cursor-hover
+    aria-label="Instagram"
+  >
+    <i class="fa-brands fa-instagram"></i>
+  </a>
+
+</div>
+      </div>
+     <!-- CLICKABLE QR CODE -->
+<div class="qr">
+
+    <a href="#social-links" class="qr-link">
+        <img 
+            src="images/contact-qr.png"
+            alt="Mohan Raj Social Media QR Code"
+            class="qr-image"
+        >
+    </a>
+
+</div>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <h2 data-reveal>Let's Build Something<br><em>Great</em> Together.</h2>
+    <div class="foot-bottom">
+      <span>© 2026 Mohanraj K — All rights reserved.</span>
+      <span>Creative Technologist / Chennai, India</span>
+      <a href="#home" class="to-top" data-cursor-hover>↑</a>
+    </div>
+  </div>
+</footer>
+
+<!-- CINEMATIC TRANSITION OVERLAY -->
+<div class="transition-overlay" id="transitionOverlay">
+  <span class="tt-main" id="ttMain">BROCHURE PROJECTS</span>
+  <span class="tt-sub" id="ttSub">INDUSTRIAL BROCHURE &amp; COMPANY PROFILE</span>
+</div>
+
+<!-- BROCHURE PROJECTS GALLERY OVERLAY -->
+<div class="br-overlay" id="brGalleryOverlay" role="dialog" aria-modal="true" aria-hidden="true">
+  <div class="blueprint"></div>
+  <div class="br-scroll" id="brGalleryScroll">
+    <button class="br-back" id="brGalleryBackTop" data-cursor-hover>← BACK TO PORTFOLIO</button>
+
+    <section class="br-gallery-hero wrap">
+      <div class="eyebrow">SERVICES / 02</div>
+      <h1 class="br-gallery-title" data-reveal>INDUSTRIAL BROCHURE<br>&amp; COMPANY PROFILE</h1>
+      <p class="br-gallery-sub" data-reveal>Technical storytelling for manufacturers and engineering firms — brochures, catalogues and company profiles built for clarity and shelf-ready polish.</p>
+    </section>
+
+    <section class="wrap">
+      <!-- =================================================
+           ADD NEW BROCHURE PROJECTS HERE
+           (see brochureProjects array in the script below —
+           this grid is generated automatically, do not edit it by hand)
+           ================================================= -->
+      <div class="br-grid" id="brGalleryGrid"></div>
+    </section>
+  </div>
+</div>
+
+<!-- BROCHURE PROJECT VIEWER (slideshow for one project) -->
+<div class="br-overlay" id="brViewerOverlay" role="dialog" aria-modal="true" aria-hidden="true">
+  <div class="blueprint"></div>
+  <div class="br-scroll" id="brViewerScroll">
+    <button class="br-back" id="brViewerBackTop" data-cursor-hover>← BACK TO BROCHURE PROJECTS</button>
+
+    <section class="br-viewer-hero wrap">
+      <div class="eyebrow" id="brViewerEyebrow">PROJECT / 01</div>
+      <h1 class="br-viewer-title" id="brViewerTitle">PROJECT TITLE</h1>
+      <div class="br-viewer-meta" id="brViewerMeta"></div>
+    </section>
+
+    <section class="br-stage-wrap wrap">
+      <div class="br-stage" id="brStage" data-cursor-hover>
+        <button class="br-stage-nav br-stage-prev" id="brStagePrev" aria-label="Previous page" data-cursor-hover>‹</button>
+        <img id="brStageImg" alt="" loading="lazy">
+        <button class="br-stage-nav br-stage-next" id="brStageNext" aria-label="Next page" data-cursor-hover>›</button>
+      </div>
+      <div class="br-counter" id="brStageCounter"><b>01</b> / 05</div>
+      <div class="br-thumbs" id="brThumbs"></div>
+    </section>
+
+    <section class="br-viewer-cta wrap">
+      <div class="eyebrow" style="justify-content:center;">LIKE THIS PROJECT?</div>
+      <h2>LET'S BUILD<br>SOMETHING<br><span style="color:var(--red);">PRECISE.</span></h2>
+      <a href="#contact" class="btn btn-primary" id="brContactBtn" data-cursor-hover>START A PROJECT</a>
+      <button class="br-back-bottom" id="brViewerBackBottom">← BACK TO BROCHURE PROJECTS</button>
+    </section>
+  </div>
+</div>
+
+<!-- FULLSCREEN LIGHTBOX -->
+<div class="br-lightbox" id="brLightbox" role="dialog" aria-modal="true" aria-hidden="true">
+  <button class="br-lb-close" id="brLbClose" aria-label="Close preview" data-cursor-hover>✕</button>
+  <button class="br-lb-prev" id="brLbPrev" aria-label="Previous page" data-cursor-hover>‹</button>
+  <div class="br-lb-stage"><img id="brLbImg" alt=""></div>
+  <button class="br-lb-next" id="brLbNext" aria-label="Next page" data-cursor-hover>›</button>
+  <div class="br-lb-counter" id="brLbCounter">01 / 05</div>
+</div>
+
+<!-- ==================================================================
+     SCRIPTS — one file per feature, loaded in the order the page
+     needs them. Edit the matching file to change that behaviour;
+     nothing else is affected. See js/README (or /README.md) for a
+     map of what each file does.
+     ================================================================== -->
+<script src="js/01-loader.js"></script>
+<script src="js/02-cursor.js"></script>
+<script src="js/03-navigation.js"></script>
+<script src="js/04-hero-canvas.js"></script>
+<script src="js/05-hero-roles.js"></script>
+<script src="js/06-hero-entrance.js"></script>
+<script src="js/07-scroll-reveals.js"></script>
+<script src="js/08-timeline.js"></script>
+<script src="js/09-stats-counters.js"></script>
+<script src="js/10-skill-bars.js"></script>
+<script src="js/11-service-card-glow.js"></script>
+<script src="js/12-projects.js"></script>
+<script src="js/13-brochure-gallery.js"></script>
+<script src="js/14-smooth-scroll.js"></script>
+</body>
+</html>
