@@ -1,0 +1,10 @@
+/* ---------- SKILLS ---------- */
+.skills-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:60px; margin-top:60px; }
+@media (max-width:860px){ .skills-grid{grid-template-columns:1fr;} }
+.skill-cat h3{ font-family:var(--sub); font-size:13px; letter-spacing:.2em; text-transform:uppercase; color:var(--grey); margin-bottom:26px; }
+.skill-row{ margin-bottom:22px; }
+.skill-row .top{ display:flex; justify-content:space-between; font-family:var(--sub); font-size:13px; margin-bottom:8px; }
+.skill-row .top span:last-child{ color:var(--grey); }
+.skill-bar{ height:2px; background:var(--border); width:100%; position:relative; overflow:hidden; }
+.skill-bar i{ position:absolute; left:0; top:0; height:100%; width:0%; background:linear-gradient(90deg,var(--red-deep),var(--red)); }
+
