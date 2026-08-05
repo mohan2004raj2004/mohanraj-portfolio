@@ -1,7 +1,0 @@
-/* ---------- FOOTER ---------- */
-footer{ padding:120px 0 50px; text-align:center; }
-footer h2{ font-size:clamp(38px,7.5vw,110px); text-transform:uppercase; line-height:.95; }
-footer h2 em{ color:var(--red); font-style:normal; }
-.foot-bottom{ margin-top:80px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:20px; border-top:1px solid var(--border); padding-top:26px; font-family:var(--sub); font-size:12px; color:var(--grey); }
-.to-top{ width:46px; height:46px; border-radius:50%; border:1px solid var(--border); display:flex; align-items:center; justify-content:center; color:#fff; text-decoration:none; }
-

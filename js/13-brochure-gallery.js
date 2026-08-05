@@ -35,9 +35,9 @@ const brochureProjects = [
     category: 'Company Profile',
     client: 'Client Name',
     year: '2026',
-    cover: 'assets/brochures/project-02/cover.jpg',
+    cover: 'assets/brochures/project-02/cover.png',
     images: [
-      'assets/brochures/project-02/page-01.jpg',
+      'assets/brochures/project-02/page-01.png',
       'assets/brochures/project-02/page-02.jpg',
       'assets/brochures/project-02/page-03.jpg'
     ]
@@ -48,9 +48,9 @@ const brochureProjects = [
     category: 'Catalogue',
     client: 'Client Name',
     year: '2026',
-    cover: 'assets/brochures/project-03/cover.jpg',
+    cover: 'assets/brochures/project-03/cover.png',
     images: [
-      'assets/brochures/project-03/page-01.jpg',
+      'assets/brochures/project-03/picture.png',
       'assets/brochures/project-03/page-02.jpg'
     ]
   }
@@ -429,4 +429,45 @@ const brochureProjects = [
   window.addEventListener('hashchange', syncFromHash);
   if(location.hash === '#brochures' || location.hash.indexOf('#brochure-') === 0) syncFromHash();
 })();
+function openProject(project) {
 
+    const gallery = document.querySelector('.project-gallery');
+    const mainImage = document.querySelector('.gallery-main-image');
+    const thumbnails = document.querySelector('.gallery-thumbnails');
+
+    if (!gallery || !mainImage || !thumbnails) return;
+
+    gallery.classList.add('active');
+
+    /* First image */
+    mainImage.src = project.images[0];
+
+    /* Remove old thumbnails */
+    thumbnails.innerHTML = '';
+
+    /* Create thumbnails */
+    project.images.forEach((imagePath, index) => {
+
+        const img = document.createElement('img');
+
+        img.src = imagePath;
+        img.alt = `${project.title} - Page ${index + 1}`;
+
+        img.addEventListener('click', () => {
+
+            mainImage.src = imagePath;
+
+            document
+                .querySelectorAll('.gallery-thumbnails img')
+                .forEach(item => item.classList.remove('active'));
+
+            img.classList.add('active');
+        });
+
+        if (index === 0) {
+            img.classList.add('active');
+        }
+
+        thumbnails.appendChild(img);
+    });
+}

@@ -86,8 +86,8 @@
 }
 
 .br-card-media img {
-    width: 70%;
-    height: 70%;
+    width: 90%;
+    height: 90%;
 
     /* Full image visible */
     object-fit: contain;
@@ -104,7 +104,7 @@
 
 /* Hover */
 .br-card:hover .br-card-media img {
-    transform: scale(1.05);
+    transform: scale(1.08);
 }
 .br-card:hover .br-card-media img{ transform:scale(1.08); }
 .br-card-glow{ position:absolute; inset:0; opacity:0; background:radial-gradient(circle at 50% 50%, rgba(255,46,46,.22), transparent 65%); transition:opacity .4s ease; pointer-events:none; }
